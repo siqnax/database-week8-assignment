@@ -56,4 +56,124 @@ mysql -u your_username -p your_database_name < clinic_booking.sql
 
 
 
-## QUESTION 2: 
+
+
+
+
+
+
+
+
+# Question 2:
+
+
+# Task Manager API
+
+A simple CRUD API built with Node.js, Express, and MySQL for managing tasks. This project demonstrates how to connect a RESTful API to a MySQL database with full CRUD functionality.
+
+---
+
+## 📦 Features
+
+- Create, Read, Update, Delete tasks
+- Relational MySQL database
+- RESTful API built with Express
+- Organized folder structure
+- Environment-based MySQL configuration
+
+---
+
+## 🗃️ Database Schema
+
+**Database Name:** `taskmanager`
+
+### Tables:
+
+#### `users`
+
+| Column     | Type        | Constraints          |
+|------------|-------------|----------------------|
+| id         | INT         | PRIMARY KEY, AUTO_INCREMENT |
+| name       | VARCHAR(100)| NOT NULL             |
+| email      | VARCHAR(100)| UNIQUE, NOT NULL     |
+
+#### `tasks`
+
+| Column     | Type         | Constraints          |
+|------------|--------------|----------------------|
+| id         | INT          | PRIMARY KEY, AUTO_INCREMENT |
+| title      | VARCHAR(255) | NOT NULL             |
+| description| TEXT         |                      |
+| status     | VARCHAR(50)  | DEFAULT 'pending'    |
+| user_id    | INT          | FOREIGN KEY (`users`.`id`) |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/task-manager-api.git
+cd task-manager-api
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+DB_HOST=localhost
+DB_USER=root (User name)
+DB_PASSWORD=1234 (yourpassword)
+DB_NAME=taskmanager
+PORT=3000
+```
+
+### 4. Import the Database
+
+Use the provided SQL file to set up your database:
+
+```bash
+mysql -u root -p taskmanager < db/schema.sql
+```
+
+### 5. Run the Server
+
+```bash
+npm start
+```
+
+The API will run at: `http://localhost:3000`
+
+---
+
+## 🔧 API Endpoints
+
+### Users
+
+- `GET /users`
+- `POST /users`
+- `GET /users/:id`
+- `PUT /users/:id`
+- `DELETE /users/:id`
+
+### Tasks
+
+- `GET /tasks`
+- `POST /tasks`
+- `GET /tasks/:id`
+- `PUT /tasks/:id`
+- `DELETE /tasks/:id`
+
+---
+
+## 📫 Contact
+
+For feedback or issues, feel free to [open an issue](https://github.com/siqnax/task-manager-api/issues).
