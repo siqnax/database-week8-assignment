@@ -114,8 +114,7 @@ A simple CRUD API built with Node.js, Express, and MySQL for managing tasks. Thi
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/task-manager-api.git
-cd task-manager-api
+git clone https://github.com/siqnax/database-week8-assignment/tree/main/question-2
 ```
 
 ### 2. Install Dependencies
@@ -176,4 +175,4 @@ The API will run at: `http://localhost:3000`
 
 ## 📫 Contact
 
-For feedback or issues, feel free to [open an issue](https://github.com/siqnax/task-manager-api/issues).
+For feedback or issues, feel free to [open an issue](https://github.com/siqnax/database-week8-assignment/issues).
