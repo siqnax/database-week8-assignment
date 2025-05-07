@@ -1,6 +1,11 @@
  -- Question 1:
 -- Database: Clinic Booking System 
 
+
+-- Create database 
+CREATE DATABASE Clinic_Booking;
+USE Clinic_Booking;
+
 -- Drop existing tables (if any) for clean setup
 DROP TABLE IF EXISTS Appointments;
 DROP TABLE IF EXISTS Patients;
